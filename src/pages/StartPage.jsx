@@ -9,7 +9,7 @@ function StartPage() {
         <main>
             <h1>LIBRARY</h1>
             {/* mappa ut böckerna från redux state */
-                books.map((book, i) => <BookCard book={book} key={i} />)
+                books.map((book, i) => <BookCard book={book} key={i} isInMyLibrary={false} />)
             }
         </main>);
 }

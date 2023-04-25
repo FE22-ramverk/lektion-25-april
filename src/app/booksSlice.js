@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     books: [{
+            id: 1,
             title: "Ängeln på sjunde trappsteget",
             author: "Frank McCourt",
             shortDesc: "lorem ipsum dolor sit amet",
@@ -10,6 +11,7 @@ const initialState = {
             genre: "skönlitteratur"
         },
         {
+            id: 2,
             title: "Dödsdansen",
             author: "Maria Grund",
             shortDesc: "lorem ipsum dolor sit amet",
@@ -18,6 +20,7 @@ const initialState = {
             genre: "Deckare"
         },
         {
+            id: 3,
             title: "Tala hästarnas språk",
             author: "Sven Forsström",
             shortDesc: "lorem ipsum dolor sit amet",
@@ -26,6 +29,7 @@ const initialState = {
             genre: "Djur & Natur"
         },
         {
+            id: 4,
             title: "Stefan Löfvens kamp mot rättvisan",
             author: "Stefan Löfven",
             shortDesc: "Ta en resa i mina skor och upptäck att även mitt liv är tufft ibland",
@@ -34,6 +38,7 @@ const initialState = {
             genre: "självbiografi"
         },
         {
+            id: 5,
             title: "Ursprung: hur jorden formade oss",
             author: "Lewis Dartnell",
             shortDesc: "lorem ipsum dolor sit amet",
