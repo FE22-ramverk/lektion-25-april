@@ -59,13 +59,18 @@ export const booksSlice = createSlice({
             state.books.push(action.payload)
         },
         addReadBook: (state, action) => {
+            //check if book already exists first
             state.readBooks.push(action.payload)
+        },
+        removeReadBook: (state, action) => {
+            let id = state.books.findIndex((book) => book.id === action.payload.id);
+            state.readBooks.splice(id, 1);
         }
     }
 });
 
 // generera actions från våra reducers
-export const { addBook, addReadBook } = booksSlice.actions;
+export const { addBook, addReadBook, removeReadBook } = booksSlice.actions;
 // exportera vår reducer
 export default booksSlice.reducer;
 

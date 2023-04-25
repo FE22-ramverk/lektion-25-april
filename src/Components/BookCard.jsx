@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+import Button from "./Button";
+import { useDispatch } from "react-redux";
+import { removeReadBook } from "../app/booksSlice";
 
 function BookCardContainerContent({ book }) {
     return (
@@ -21,12 +24,13 @@ function BookCardContainerContent({ book }) {
 }
 
 function BookCard({ book, isInMyLibrary }) {
+    const dispatch = useDispatch();
     return (
         <>
             {isInMyLibrary ?
                 <article className="bookCardContainer">
                     <BookCardContainerContent book={book} />
-                    <button>Delete</button>
+                    <Button title="Remove" action={() => dispatch(removeReadBook(book))}/>
                 </article>
                 :
                 <Link to={'/bookinfo/' + book.id + '/' + book.title}>

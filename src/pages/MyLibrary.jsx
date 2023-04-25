@@ -6,7 +6,7 @@ function MyLibrary() {
     return ( 
         <main>
             <h1>MY LIBRARY</h1>
-            {books && books.map((book) => <BookCard key={book.title + book.id} book={book} isInMyLibrary={true} />)}
+            {books && books.map((book,i) => <BookCard key={book.id + i.toString()} book={book} isInMyLibrary={true} />)}
         </main>
      );
 }
