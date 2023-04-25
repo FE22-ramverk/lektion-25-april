@@ -56,7 +56,10 @@ export const booksSlice = createSlice({
     initialState,
     reducers: {
         addBook: (state, action) => {
-            state.books.push(action.payload)
+            // generera nytt id utifrån befintlig boklista
+            let id = state.books.length + 1;
+            let newBook = { id: id, ...action.payload };
+            state.books.push(newBook);
         },
         addReadBook: (state, action) => {
             //check if book already exists first

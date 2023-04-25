@@ -3,6 +3,7 @@ import './App.css'
 import StartPage from './pages/StartPage'
 import BookInfo from './pages/BookInfo'
 import MyLibrary from './pages/MyLibrary'
+import AddBook from './pages/AddBook'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
         <Route exact path="/" element={<StartPage />} />
         <Route path="/bookinfo/:id/:title" element={<BookInfo />} />
         <Route path="/mylibrary" element={<MyLibrary />} />
+        <Route path="/addnewbook" element={<AddBook />} />
       </Routes>
     </BrowserRouter>
   )
