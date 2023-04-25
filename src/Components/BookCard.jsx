@@ -6,7 +6,7 @@ import { removeReadBook } from "../app/booksSlice";
 function BookCardContainerContent({ book }) {
     return (
         <>
-            <section className="bookCardContainer__image" style={{
+            {/* <section className="bookCardContainer__image" style={{
                 width: 300,
                 height: 300,
                 margin: "auto",
@@ -14,7 +14,7 @@ function BookCardContainerContent({ book }) {
                 backgroundPosition: "center center",
                 backgroundSize: "contain",
                 backgroundImage: `url(${book.imgUrl})`,
-            }}></section>
+            }}></section> */}
             <section className="bookCardContainer__info">
                 <h2>{book.title}</h2>
                 <p>{book.author}</p>

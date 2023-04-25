@@ -63,7 +63,7 @@ export const booksSlice = createSlice({
             state.readBooks.push(action.payload)
         },
         removeReadBook: (state, action) => {
-            let id = state.books.findIndex((book) => book.id === action.payload.id);
+            let id = state.readBooks.findIndex((book) => book.id === action.payload.id);
             state.readBooks.splice(id, 1);
         }
     }
