@@ -1,11 +1,19 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
+import StartPage from './pages/StartPage'
+import BookInfo from './pages/BookInfo'
+import MyLibrary from './pages/MyLibrary'
 
 function App() {
 
   return (
-    <>
-     <h1>Appis</h1>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/" element={<StartPage />} />
+        <Route path="/bookinfo/:name" element={<BookInfo />} />
+        <Route path="/mylibrary" element={<MyLibrary />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

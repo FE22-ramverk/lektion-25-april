@@ -41,7 +41,8 @@ const initialState = {
             imgUrl: "https://image.bokus.com/images/9789189043329_200x_ursprung-hur-jorden-formade-oss",
             genre: "Utvecklingslära"
         }
-    ]
+    ],
+    readBooks: []
 };
 
 // skapa vår slice
@@ -52,14 +53,14 @@ export const booksSlice = createSlice({
         addBook: (state, action) => {
             state.books.push(action.payload)
         },
-        removeLastBook: (state) => {
-            state.books.pop()
-        },
+        addReadBook: (state, action) => {
+            state.readBooks.push(action.payload)
+        }
     }
 });
 
 // generera actions från våra reducers
-export const { addBook, removeLastBook } = booksSlice.actions;
+export const { addBook, addReadBook } = booksSlice.actions;
 // exportera vår reducer
 export default booksSlice.reducer;
 
